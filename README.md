@@ -9,3 +9,11 @@ An MCP bridge script you run via uv (or system Python) that communicates via std
 Below are the complete instructions for setting up Houdini, uv, and Claude Desktop.
 
 ---
+
+## Requierments
+- SideFX Houdini
+- Claude Desktop(latest version)
+
+---
+
+## Houdini MCP Pligin Installation
