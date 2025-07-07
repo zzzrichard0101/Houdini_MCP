@@ -35,7 +35,7 @@ In the `houdinimcp/` directory, set up a Python virtual environment and install 
 cd C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp
 python -m venv .venv
 .\.venv\Scripts\activate
-pip install fastapi
+pip install fastapi requests
 ~~~
 
 ### 1.3 Shelf Tool
