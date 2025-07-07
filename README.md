@@ -20,7 +20,7 @@ Below are the complete instructions for setting up Houdini, uv, and Claude Deskt
 
 ### 1.1 Folder Layout
 Creat a folder in your Houdini scripts directory:
-C:/Users/YourUserName/Documents/houdini##.#/scripts/python/houdinimcp/
+C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp/
 
 Inside `houdinimcp/`, place:
 - `__init__.py` - handles plugin initialization (start/stop server)
@@ -30,7 +30,16 @@ Inside `houdinimcp/`, place:
 
 (If you prefer, `houdini_mcp_server.py` can live elsewhere. As long as you know its path for running with `uv`.)
 
-### 1.2 Shelf Tool
+### 1.2 Set Up Virtual Environment
+In the `houdinimcp/` directory, set up a Python virtual environment and install the dependencies:
+~~~ terminal
+cd C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp
+python -m venv .venv
+.\.venv\Scripts\activate
+pip install fastapi
+~~~
+
+### 1.3 Shelf Tool
 create a Shelf Tool to toggle the server in Houdini:
 1. Right-click a shelf → "New Shelf..."
 Name it "MCP" or something similar
@@ -48,7 +57,7 @@ Name it "MCP" or something similar
        hou.ui.displayMessage("Houdini MCP Server started on localhost:9876")
 ~~~
 
-### 1.3 Packages Integration
+### 1.4 Packages Integration
 If you want Houdini to auto-load your plugin at startup, create a package file named houdinimcp.json in the Houdini packages folder (e.g. C:/Users/YourUserName/Documents/houdini19.5/packages/):
 ~~~ python
 {
