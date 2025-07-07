@@ -42,8 +42,11 @@ pip install fastapi
 ### 1.3 Shelf Tool
 create a Shelf Tool to toggle the server in Houdini:
 1. Right-click a shelf → "New Shelf..."
+
 Name it "MCP" or something similar
+
 2. Right-click again → "New Tool..." Name: "Toggle MCP Server" Label: "MCP"
+
 3. Under Script, insert something like:
 ~~~ python
    import hou
@@ -90,6 +93,14 @@ Add an entry:
   }
 }
 ~~~
+if uv run was successful and claude failed to load mcp, make sure claude is using the same python version, use:
+~~~ python
+  python -c "import sys; print(sys.executable)"
+~~~
+to find python, and replace "python" with the path you got.
+
+## 3. Use Cursor
+Go to Settings > MCP > add new MCP server add the same entry in claude_desktop_config.json you might need to stop claude and restart houdini and the server
 
 ## If the installation is successful, Claude should appear like this:
 <img width="489" alt="Screenshot 2025-07-07 at 2 34 42 PM" src="https://github.com/user-attachments/assets/249f24b0-2757-43a6-af53-80874b20d6e6" />
