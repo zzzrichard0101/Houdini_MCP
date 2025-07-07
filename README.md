@@ -16,21 +16,21 @@ Below are the complete instructions for setting up Houdini, uv, and Claude Deskt
 
 ---
 
-## Houdini MCP Plugin Installation
+## 1. Houdini MCP Plugin Installation
 
-### 1. Folder Layout
+### 1.1 Folder Layout
 Creat a folder in your Houdini scripts directory:
 C:/Users/YourUserName/Documents/houdini##.#/scripts/python/houdinimcp/
 
-Inside **houdinimcp/**, place:
-- __init__.py - handles plugin initialization (start/stop server)
-- server.py - defines the HoudiniMCPServer (listening on default port 9876)
-- houdini_mcp_server.py – optional bridging script (some prefer a separate location)
-- pyproject.toml
+Inside `houdinimcp/`, place:
+- `__init__.py` - handles plugin initialization (start/stop server)
+- `server.py` - defines the `HoudiniMCPServer` (listening on default port `9876`)
+- `houdini_mcp_server.py` – optional bridging script (some prefer a separate location)
+- `pyproject.toml`
 
-(If you prefer, houdini_mcp_server.py can live elsewhere. As long as you know its path for running with uv.)
+(If you prefer, `houdini_mcp_server.py` can live elsewhere. As long as you know its path for running with `uv`.)
 
-### 2. Shelf Tool
+### 1.2 Shelf Tool
 create a Shelf Tool to toggle the server in Houdini:
 1. Right-click a shelf → "New Shelf..."
 Name it "MCP" or something similar
@@ -48,7 +48,7 @@ Name it "MCP" or something similar
        hou.ui.displayMessage("Houdini MCP Server started on localhost:9876")
 ~~~
 
-### 3. Packages Integration
+### 1.3 Packages Integration
 If you want Houdini to auto-load your plugin at startup, create a package file named houdinimcp.json in the Houdini packages folder (e.g. C:/Users/YourUserName/Documents/houdini19.5/packages/):
 ~~~ python
 {
@@ -64,5 +64,24 @@ If you want Houdini to auto-load your plugin at startup, create a package file n
 ~~~
 
 
+## 2. Telling Claude for Desktop to Use Your Script
 
+Go to File > Settings > Developer > Edit Config > Open or create: claude_desktop_config.json
+
+Add an entry:
+~~~ python
+{
+  "mcpServers": {
+    "houdini": {
+      "command": "C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp/.venv/Scripts/python.exe",
+      "args": [
+        "C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp/houdini_mcp_server.py"
+      ]
+    }
+  }
+}
+~~~
+
+## If the installation is successful, Claude should appear like this:
+<img width="489" alt="Screenshot 2025-07-07 at 2 34 42 PM" src="https://github.com/user-attachments/assets/249f24b0-2757-43a6-af53-80874b20d6e6" />
 
