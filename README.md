@@ -91,11 +91,7 @@ Add an entry:
   }
 }
 ~~~
-If the server starts but Claude fails to load the MCP connection, make sure Claude is using the same Python version as your virtual environment. Use:
-~~~ python
-  python -c "import sys; print(sys.executable)"
-~~~
-to find python, and replace "python" with the path you got.
+
 
 ## 3. Use Cursor
 Go to Settings > MCP > add new MCP server add the same entry in claude_desktop_config.json you might need to stop claude and restart houdini and the server
