@@ -28,7 +28,7 @@ Inside `houdinimcp/`, place:
 - `pyproject.toml`
 
 
-### 1.2 Set Up Virtual Environment
+### 1.2 Set Up Virtual Environment(CMD or PowerShell)
 In the `houdinimcp/` directory, set up a Python virtual environment and install the dependencies:
 ~~~ powershell
 cd C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp
