@@ -9,7 +9,7 @@ An MCP bridge script you run using your virtual environment (e.g., python houdin
 
 ---
 
-## Requierments
+## Requirements
 - SideFX Houdini
 - Claude Desktop(latest version)
 
@@ -18,7 +18,7 @@ An MCP bridge script you run using your virtual environment (e.g., python houdin
 ## 1. Houdini MCP Plugin Installation
 
 ### 1.1 Folder Layout
-Creat a folder in your Houdini scripts directory:
+Create a folder in your Houdini scripts directory:
 C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp/
 
 Inside `houdinimcp/`, place:
@@ -34,7 +34,7 @@ In the `houdinimcp/` directory, set up a Python virtual environment and install 
 cd C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp
 python -m venv .venv
 .\.venv\Scripts\activate
-pip install fastapi requests
+pip install fastapi requests openai
 ~~~
 
 ### 1.3 Shelf Tool
