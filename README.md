@@ -28,7 +28,6 @@ Inside `houdinimcp/`, place:
 - `houdini_mcp_server.py` – optional bridging script (some prefer a separate location)
 - `pyproject.toml`
 
-(If you prefer, `houdini_mcp_server.py` can live elsewhere. As long as you know its path for running with `uv`.)
 
 ### 1.2 Set Up Virtual Environment
 In the `houdinimcp/` directory, set up a Python virtual environment and install the dependencies:
