@@ -25,7 +25,7 @@ Inside `houdinimcp/`, place:
 - `__init__.py` - handles plugin initialization (start/stop server)
 - `server.py` - defines the `HoudiniMCPServer` (listening on default port `9876`)
 - `houdini_mcp_server.py` – optional bridging script (some prefer a separate location)
-- `pyproject.toml`
+- `pyproject.toml`, `HoudiniMCPRender`, `main`
 
 
 ### 1.2 Set Up Virtual Environment(CMD or PowerShell)
@@ -103,3 +103,5 @@ Go to Settings > MCP > add new MCP server add the same entry in claude_desktop_c
 ## If the installation is successful, Claude should appear like this:
 <img width="489" alt="Screenshot 2025-07-07 at 2 34 42 PM" src="https://github.com/user-attachments/assets/249f24b0-2757-43a6-af53-80874b20d6e6" />
 
+## 4. Acknowledgement
+Houdini_MCP was built following [Houdini-mcp](https://github.com/capoomgit/houdini-mcp?tab=readme-ov-file) & [blender-mcp](https://github.com/ahujasid/blender-mcp). We thank them for the contribution.
