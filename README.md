@@ -30,7 +30,7 @@ Inside `houdinimcp/`, place:
 
 ### 1.2 Set Up Virtual Environment(CMD or PowerShell)
 In the `houdinimcp/` directory, set up a Python virtual environment and install the dependencies:
-~~~ powershell
+~~~ terminal
 cd C:/Users/<YourUserName>/Documents/houdini##.#/scripts/python/houdinimcp
 python -m venv .venv
 .\.venv\Scripts\activate
